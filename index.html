@@ -15,13 +15,24 @@ body, html {
 }
 
 /* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("resources/hacktoberfest.png");
-  min-height: 100%;
+  @media (min-width: 400px)
+{
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("resources/hacktoberfest.png");
+    min-height: 100%;
+  }
 }
-
+  @media (max-width: 400px)
+{
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("resources/HF19.jpg");
+    min-height: 100%;
+  }
+}
 .w3-bar .w3-button {
   padding: 16px;
 }
