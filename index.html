@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<style>
+p.small {
+  line-height: 0.1;
+}
+</style>
 <title>Hacktoberfest</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +42,7 @@ body, html {
   padding: 16px;
 }
 </style>
+
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -70,20 +76,53 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+	
   <div class="w3-display-left w3-text-white" style="padding-top: 230px;
   padding-left: 48px">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<!-- Display the countdown timer in an element -->
+<p class="small", id="timer", style="font-size: 40px"></p>
+<p class="small", id="text" style="font-size: 18px"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("October 17, 2019 11:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timer").innerHTML = days  + " | " + hours + " | "
+  + minutes + " | " + seconds;
+  document.getElementById("text").innerHTML = "   Days| " + " Hours| " + " Minutes| " + " Seconds ";
+
+
+}, 1000);
+</script>
+
+
+
     <span class="w3-jumbo w3-hide-small">Whatever we name it</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Whatever we name it</span><br>
     <!--<span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span> -->
-    <p><a href="registration.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Register</a></p>
-  </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <a href="https://www.facebook.com/asetalias/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://github.com/asetalias"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://www.youtube.com/channel/UCKkyqEMLFW3jz-q3nJIFL3g"><i class="fa fa-youtube w3-hover-opacity"></i></a>
-    <a href="https://groups.google.com/forum/#!forum/amity-linux-group"><i class="fa fa-envelope-o w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/company/asetalias/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  </div>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScA2nRRTBKC6fRAn9B6Tgk-oigUsYwurVpmUv_qx2snFX0_Vw/viewform" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Register</a></p>
+  
 </header>
 
 <!-- About Section -->
