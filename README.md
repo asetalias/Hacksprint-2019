@@ -1,1 +1,3 @@
-# ALiAS_Hacktoberfest_2
+# Hacksprint 2019 Official Repository
+
+Welcome to the official repository of Hacksprint 2019.

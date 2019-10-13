@@ -1,220 +1,238 @@
 <!DOCTYPE html>
 <html>
-<style>
-p.small {
-  line-height: 0.1;
-}
-</style>
-<title>Hacktoberfest</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="resources/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-/* Full height image header */
-  @media (min-width: 375px)
-{
-  .bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("resources/hacktoberfest.png");
-    min-height: 100%;
-  }
-}
-  @media (max-width: 375px)
-{
-  .bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("resources/HF19.png");
-    min-height: 50%;
-  }
-}
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
 
-<body>
+<head>
+    <meta charset="UTF-8">
+    <title>Hacksprint 2019</title>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-transparent w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide w3-text-orange">AliAS</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button w3-text-orange">About</a>
-      <a href="#talks" class="w3-bar-item w3-button w3-text-orange"><i class="fa fa-microphone"></i> Talks</a>
-      <a href="#hacktoberfest" class="w3-bar-item w3-button w3-text-orange"><i class="fa fa-microchip"></i> Hactoberfest</a>
-      <a href="#devsprint" class="w3-bar-item w3-button w3-text-orange"><i class="fa fa-laptop"></i> Devsprint</a>
+    <meta name="description"
+        content="It's October ! Time to celebrate open source . ALiAS is back with Hacktoberfest to get you started with your contributions. Learn how to make your first PR." />
 
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.png">
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large " style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3">About</a>
-  <a href="#talks" onclick="w3_close()" class="w3-bar-item w3-button">Talks</a>
-  <a href="#hacktoberfest" onclick="w3_close()" class="w3-bar-item w3-button">Hactoberfest</a>
-  <a href="#devsprint" onclick="w3_close()" class="w3-bar-item w3-button">Devsprint</a>
-</nav>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-	
-  <div class="w3-display-left w3-text-white" style="padding-top: 230px;
-  padding-left: 48px">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
 
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        p.small {
+            line-height: 0.1;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .full-screen {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        #mainNav .nav-link {
+            color: #FFF;
+        }
+
+        #mainNav .nav-link:hover {
+            text-decoration: none;
+        }
+
+        #home {
+            background-color: #152347;
+            background-image: url(resources/images/hacktoberfest_art.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 140px;
+            position: relative;
+        }
+
+        #home .header-image {
+            width: 75%;
+            max-width: 350px;
+        }
+
+        .text-primary {
+            color: #e308b2 !important;
+        }
+
+        .text-secondary {
+            color: #528efa !important;
+        }
+
+
+        .timer .time {
+            display: inline-block;
+            text-align: center;
+            color: #e308b2;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .timer .time>span {
+            display: block;
+        }
+
+        .timer .time>span:nth-child(1) {
+            font-weight: 700;
+            font-size: 2em;
+        }
+
+        .register-btn {
+            border: 1px solid #e308b2;
+            padding: 10px 20px;
+            border-radius: 3px;
+            color: #e308b2;
+            transition: 0.3s all;
+            font-weight: 700;
+        }
+
+        .register-btn:hover {
+            text-decoration: none;
+            background-color: #e308b2;
+            color: #FFF;
+        }
+
+        #typed {
+            font-size: 2em;
+            font-weight: 700;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Display the countdown timer in an element -->
-<p class="small", id="timer", style="font-size: 40px"></p>
-<p class="small", id="text" style="font-size: 18px"></p>
+    <nav class="navbar navbar-expand-lg navbar-theme fixed-top" id="mainNav">
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="resources/images/logo-light.png" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("October 17, 2019 11:00:00").getTime();
-// Update the count down every 1 second
-var x = setInterval(function() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  // Display the result in the element with id="demo"
-  document.getElementById("timer").innerHTML = days  + " | " + hours + " | "
-  + minutes + " | " + seconds;
-  document.getElementById("text").innerHTML = "   Days| " + " Hours| " + " Minutes| " + " Seconds ";
-}, 1000);
-</script>
+    <!-- Header with full-height image -->
+    <section class="full-screen text-center container-fluid" id="home">
+        <p class="text-primary mb-0 font-weight-bold"><em>presents</em></p>
+        <img src="resources/images/hacktoberfest.png" class="header-image">
 
+        <div class="timer">
+            <!-- Display the countdown timer in an element -->
+            <div class="time">
+                <span class="day">0</span>
+                <span>Days</span>
+            </div>
+            <div class="time">
+                <span class="hour">0</span>
+                <span>Hours</span>
+            </div>
+            <div class="time">
+                <span class="minute">0</span>
+                <span>Minutes</span>
+            </div>
+            <div class="time">
+                <span class="second">0</span>
+                <span>Seconds</span>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-12 text-center text-primary mt-4">
+                <span id="typed"></span>
+                <div id="typed-strings">
+                    <p>Talks</p>
+                    <p>DevSprints</p>
+                    <p>Hacktoberfest</p>
+                </div>
+            </div>
+            <div class="col-12 text-center text-secondary font-weight-bold">
+                OPEN FOR ALL AMITIANS AND NON-AMITY STUDENTS AND PROFESSIONALS
+            </div>
+        </div>
 
-    <span class="w3-jumbo w3-hide-small">HackSprint</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">HackSprint</span><br>
-    <!--<span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span> -->
-    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScA2nRRTBKC6fRAn9B6Tgk-oigUsYwurVpmUv_qx2snFX0_Vw/viewform" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Register</a></p>
-  
-</header>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6 text-center">
+                <h4 class="text-primary font-weight-bold mb-0">17 Oct 2019</h4>
+                <p class="text-secondary mt-1">11 AM - 5 PM</p>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                <h4 class="text-primary font-weight-bold mb-0">Amity University</h4>
+                <p class="text-secondary">L1 Audi, Sector 125, Noida</p>
+            </div>
+        </div>
 
-<!-- About Section -->
-<div class="w3-container w3-light-grey"  style="padding:128px 16px", id="about">
-  <h3 class="w3-center">ABOUT HACKTOBERFEST</h3>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-user w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Who</p>
-      <p>Hacktoberfest is the world wide celebration of open source</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-map-marker w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Where</p>
-      <p>Amity University Noida</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-github-square w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">How</p>
-      <p>Make Four pull requests to GitHub-hosted repositories</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-calendar-check-o w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">When</p>
-      <p>Sign up anytime between October 1 and October 31</p>
-    </div>
-  </div>
-</div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a href="https://bit.ly/hack_sprint" target="_blank" class="register-btn">Register Now</a>
+                <p class="text-primary mt-2"><small><em>It's Free</em></small></p>
+            </div>
+        </div>
+    </section>
 
-<!-- Promo Section  -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="talks">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Talks</h3>
-      <p>Talks on Machine Learning, Web Development and Augmented Reality</p>
-      </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="resources/talks.jpg" alt="Talks" width="500" height="394">
-    </div>
-  </div>
-</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="hacktoberfest">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Hacktoberfest</h3>
-      <p>Contribute to open source and earn a limited edition T-shirt and Swags!. Learn how to make a PR with us.</p>
-      </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="resources/hacktober.png" alt="Hacktoberfest" width="500" height="394">
-    </div>
-  </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="devsprint">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Devsprint</h3>
-      <p>Interact with mentors who are contributing to successful projects in open source and learn how to get started.</p>
-      </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="resources/devsprint.png" alt="Devsprint" width="500" height="394">
-    </div>
-  </div>
-</div>
+    <script>
+        $(document).ready(function (e) {
+            // Set the date we're counting down to
+            var countDownDate = new Date("October 17, 2019 11:00:00").getTime();
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+                // Get today's date and time
+                var now = new Date().getTime();
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <a href="https://www.facebook.com/asetalias/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <a href="https://github.com/asetalias"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://www.youtube.com/channel/UCKkyqEMLFW3jz-q3nJIFL3g"><i class="fa fa-youtube w3-hover-opacity"></i></a>
-    <a href="https://groups.google.com/forum/#!forum/amity-linux-group"><i class="fa fa-envelope-o w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/company/asetalias/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  </div>
-  <p>Powered by <a href="https://asetalias.in/" title="W3.CSS" target="_blank" class="w3-hover-text-green">ALiAS</a></p>
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+                $(".timer .time .day").html(days);
+                $(".timer .time .hour").html(hours);
+                $(".timer .time .minute").html(minutes);
+                $(".timer .time .second").html(seconds);
+
+            }, 1000);
+        })
+
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 80,
+            loop: true,
+            cursorChar: '_',
+            backSpeed: 40
+
+        });
+    </script>
 
 </body>
+
 </html>
