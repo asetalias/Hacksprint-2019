@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <style>
 p.small {
   line-height: 0.1;
 }
-
 </style>
 <title>Hacktoberfest</title>
 <meta charset="UTF-8">
@@ -15,12 +13,10 @@ p.small {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
 body, html {
   height: 100%;
   line-height: 1.8;
 }
-
 /* Full height image header */
   @media (min-width: 375px)
 {
@@ -53,7 +49,7 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button w3-wide w3-text-orange">AliAS</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button w3-text-orange">ABOUT</a>
+      <a href="#about" class="w3-bar-item w3-button w3-text-orange">About</a>
       <a href="#talks" class="w3-bar-item w3-button w3-text-orange"><i class="fa fa-microphone"></i> Talks</a>
       <a href="#hacktoberfest" class="w3-bar-item w3-button w3-text-orange"><i class="fa fa-microchip"></i> Hactoberfest</a>
       <a href="#devsprint" class="w3-bar-item w3-button w3-text-orange"><i class="fa fa-laptop"></i> Devsprint</a>
@@ -70,7 +66,7 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large " style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3">ABOUT</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3">About</a>
   <a href="#talks" onclick="w3_close()" class="w3-bar-item w3-button">Talks</a>
   <a href="#hacktoberfest" onclick="w3_close()" class="w3-bar-item w3-button">Hactoberfest</a>
   <a href="#devsprint" onclick="w3_close()" class="w3-bar-item w3-button">Devsprint</a>
@@ -93,35 +89,28 @@ body, html {
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("October 17, 2019 11:00:00").getTime();
-
 // Update the count down every 1 second
 var x = setInterval(function() {
-
   // Get today's date and time
   var now = new Date().getTime();
-
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
   // Display the result in the element with id="demo"
   document.getElementById("timer").innerHTML = days  + " | " + hours + " | "
   + minutes + " | " + seconds;
   document.getElementById("text").innerHTML = "   Days| " + " Hours| " + " Minutes| " + " Seconds ";
-
-
 }, 1000);
 </script>
 
 
 
-    <span class="w3-jumbo w3-hide-small">Hacktober Sprint</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Hacktober Sprint</span><br>
+    <span class="w3-jumbo w3-hide-small">HackSprint</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">HackSprint</span><br>
     <!--<span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span> -->
     <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScA2nRRTBKC6fRAn9B6Tgk-oigUsYwurVpmUv_qx2snFX0_Vw/viewform" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Register</a></p>
   
@@ -134,22 +123,22 @@ var x = setInterval(function() {
     <div class="w3-quarter">
       <i class="fa fa-user w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Who</p>
-      <p>Hacktoberfest is open to everyone in our global community</p>
+      <p>Hacktoberfest is the world wide celebration of open source</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-map-marker w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Where</p>
-      <p>ALiAS Amity Noida</p>
+      <p>Amity University Noida</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-github-square w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">How</p>
-      <p>Make Five pull requests to GitHub-hosted repositories</p>
+      <p>Make Four pull requests to GitHub-hosted repositories</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-calendar-check-o w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">When</p>
-      <p>You can sign up anytime between October 1 and October 31</p>
+      <p>Sign up anytime between October 1 and October 31</p>
     </div>
   </div>
 </div>
@@ -159,7 +148,7 @@ var x = setInterval(function() {
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Talks</h3>
-      <p>Talks about Machine Learning, Web Development and Augmented Reality</p>
+      <p>Talks on Machine Learning, Web Development and Augmented Reality</p>
       </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="resources/talks.jpg" alt="Talks" width="500" height="394">
@@ -171,7 +160,7 @@ var x = setInterval(function() {
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Hacktoberfest</h3>
-      <p>Support open source and earn a limited edition T-shirt and Swags!</p>
+      <p>Contribute to open source and earn a limited edition T-shirt and Swags!. Learn how to make a PR with us.</p>
       </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="resources/hacktober.png" alt="Hacktoberfest" width="500" height="394">
@@ -183,7 +172,7 @@ var x = setInterval(function() {
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Devsprint</h3>
-      <p>Live coding competition</p>
+      <p>Interact with mentors who are contributing to successful projects in open source and learn how to get started.</p>
       </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="resources/devsprint.png" alt="Devsprint" width="500" height="394">
@@ -212,11 +201,8 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
-
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
-
 function w3_open() {
   if (mySidebar.style.display === 'block') {
     mySidebar.style.display = 'none';
@@ -224,7 +210,6 @@ function w3_open() {
     mySidebar.style.display = 'block';
   }
 }
-
 // Close the sidebar with the close button
 function w3_close() {
     mySidebar.style.display = "none";
@@ -233,4 +218,3 @@ function w3_close() {
 
 </body>
 </html>
-
